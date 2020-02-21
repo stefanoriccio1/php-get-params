@@ -43,14 +43,14 @@
    <div class="green">
      <?php for ($i=0; $i < count($db['pm']) ; $i++) {
 
-       echo $db['pm'][$i]['name'] ." " .$db['pm'][$i]['lastname'];
+       echo "<li>" .$db['pm'][$i]['name'] ." - " .$db['pm'][$i]['lastname'] ."</li>";
      }
      ?>
    </div>
    <div class="grey">
      <?php for ($i=0; $i < count($db['pm']) ; $i++) {
 
-       echo $db['teachers'][$i]['name'] ." " .$db['teachers'][$i]['lastname'];
+       echo "<li>" .$db['teachers'][$i]['name'] ." - " .$db['teachers'][$i]['lastname']."</li>";
      }
      ?>
    </div>
