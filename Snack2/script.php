@@ -10,6 +10,24 @@ if (empty($name) || empty($age) || empty($email)){
 
   $message = 'Errore';
 }
+elseif (strlen($name) <= 3){
+
+ $message = 'Accesso negato!';
+
+}
+elseif(strpos($email, '@') === false || strpos($email, '.') === false){
+
+$message = 'Accesso negato!';
+
+}
+elseif (!is_numeric($age)){
+
+  $message = 'Accesso negato!';
+}
+else{
+
+  $message = 'Accesso riuscito';
+}
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -21,6 +39,6 @@ if (empty($name) || empty($age) || empty($email)){
     <h1><?php echo $name?></h1>
     <h2><?php echo $age?></h2>
     <h3><?php echo $email?></h3>
-    <h4><?php echo $message?></h4>
+    <h4 class=<?php $class?>><?php echo $message?></h4>
   </body>
 </html>
