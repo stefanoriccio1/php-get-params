@@ -18,6 +18,6 @@ else {
     <title>Get</title>
   </head>
   <body>
-   <h1 class = "<?php $class ?>"><?php $messaggio ?></h1>
+   <h1 class = "<?php echo $class ?>"><?php echo $messaggio ?></h1>
   </body>
 </html>
